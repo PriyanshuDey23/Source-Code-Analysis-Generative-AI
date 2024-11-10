@@ -1,0 +1,13 @@
+langchain
+langchain_community
+langchain-google-genai
+python-dotenv
+langchain_experimental
+langchainhub
+langchain_chroma
+chromadb==0.4.4
+flask
+pypdf
+GitPython
+unstructured
+-e .
