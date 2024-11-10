@@ -12,7 +12,7 @@ A comprehensive solution for analyzing and processing source code using generati
 ### Prerequisites
 
 - [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/) (for managing environments)
-- An OpenAI API key (for accessing AI capabilities)
+- An GOOGLE API key 
 
 ### Installation
 
@@ -38,7 +38,7 @@ pip install -r requirements.txt
 
 #### Step 4: Set Up API Credentials
 
-Create a `.env` file in the project root directory and add your OpenAI API key:
+Create a `.env` file in the project root directory and add your Google API key:
 
 ```ini
 GOOGLE_API_KEY="your_google_api_key_here"
