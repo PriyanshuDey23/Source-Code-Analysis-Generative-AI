@@ -1,71 +1,91 @@
+# 🚀 Source Code Analysis
 
+![](output.png)
 
+## 📌 Overview
+**Source Code Analysis** is a Streamlit-based application that allows users to **ingest a GitHub repository** and **chat with it** using AI. It utilizes **LangChain, ChromaDB, and Google Generative AI** to enable interactive analysis of source code.
 
-# End-to-End Source Code Analysis with Generative AI
-
-A comprehensive solution for analyzing and processing source code using generative AI models. This project leverages the power of OpenAI's models to provide insightful analysis on various aspects of source code.
+## 🛠 Features
+- 📂 **GitHub Repository Ingestion** – Clone and process a repository.
+- 🔎 **AI-Powered Code Analysis** – Ask questions about the repository.
+- 💾 **Vector Database Storage** – Stores code embeddings in ChromaDB.
+- 🧠 **Memory-Based Conversations** – Maintains chat history.
+- 🎯 **Conversational Retrieval Chain** – Provides accurate responses using MMR-based search.
 
 ---
 
-## Getting Started
+## 📂 Project Structure
+```
+📦 source-code-analysis
+├── 📂 src
+│   ├── helper.py  # Repository ingestion, text processing, and embeddings
+├── store_index.py  # Loads repo, splits text, and stores in ChromaDB
+├── app.py  # Streamlit UI for interacting with the repo
+├── requirements.txt  # Dependencies
+└── README.md  # Project documentation
+```
 
-### Prerequisites
+---
 
-- [Conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/) (for managing environments)
-- An GOOGLE API key 
-
-### Installation
-
-#### Step 1: Clone the Repository
-
-```bash
+## 🚀 Installation & Setup
+### 1️⃣ Clone the Repository
+```sh
 git clone https://github.com/PriyanshuDey23/Source-Code-Analysis-Generative-AI.git
-
+cd source-code-analysis
 ```
 
-#### Step 2: Create a Conda Environment
-
-```bash
-conda create -n llmapp python=3.10 -y
-conda activate llmapp
+### 2️⃣ Create a Virtual Environment
+```sh
+python -m venv venv
+source venv/bin/activate  # On macOS/Linux
+venv\Scripts\activate  # On Windows
 ```
 
-#### Step 3: Install Required Packages
-
-```bash
+### 3️⃣ Install Dependencies
+```sh
 pip install -r requirements.txt
 ```
 
-#### Step 4: Set Up API Credentials
-
-Create a `.env` file in the project root directory and add your Google API key:
-
-```ini
-GOOGLE_API_KEY="your_google_api_key_here"
+### 4️⃣ Set Up API Keys
+Create a `.env` file and add your **Google API Key**:
+```sh
+GOOGLE_API_KEY=your_google_api_key
 ```
-
-#### Step 5: Run the Application
-
-Start the app with the following command:
-
-```bash
-python app.py
-```
-
-#### Step 6: Access the Application
-
-Open your browser and navigate to `http://localhost:5000` to start using the application.
 
 ---
 
-## Tech Stack
+## 🎯 How to Use
+### 1️⃣ Run the Application
+```sh
+streamlit run app.py
+```
 
-- **Python**: Core language for the project
-- **LangChain**: Framework for interacting with language models
-- **Flask**: Web application framework
-- **Google Gemini**: AI model for code analysis
-- **ChromaDB**: Database for storing and retrieving embeddings
+### 2️⃣ Ingest a GitHub Repository
+- Enter a **GitHub repository URL** in the sidebar.
+- Click **"Ingest Repo"** to clone and index the repository.
+
+### 3️⃣ Chat with the Repository
+- Type a question in the chat input field.
+- Click **"Send"** to receive AI-generated responses about the code.
+
+### 4️⃣ Clear Repository
+- Click **"Clear Repository"** to remove the stored repo and reset the session.
 
 ---
 
-Feel free to contribute to this project by submitting issues, feature requests, or pull requests!
+## ⚡ Technologies Used
+- **Python** 🐍
+- **Streamlit** – For UI 📺
+- **LangChain** – For AI-powered retrieval 🤖
+- **ChromaDB** – For vector storage 📊
+- **Google Generative AI** – For embeddings & chat ✨
+
+---
+
+
+
+## 📝 License
+This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for more details.
+
+---
+

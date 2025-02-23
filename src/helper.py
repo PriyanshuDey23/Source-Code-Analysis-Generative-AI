@@ -5,7 +5,10 @@ from langchain.document_loaders.parsers import LanguageParser
 from langchain.text_splitter import Language
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_google_genai import GoogleGenerativeAIEmbeddings # Embedding Model
+from dotenv import load_dotenv
 
+# Load th api key
+load_dotenv()
 
 # clone any github repositories 
 def repo_ingestion(repo_url):
@@ -20,7 +23,7 @@ def load_repo(repo_path):
                                         glob = "**/*",
                                        suffixes=[".py"],
                                        parser = LanguageParser(language=Language.PYTHON, parser_threshold=500)
-                                        )
+    )
     
     documents = loader.load()
 

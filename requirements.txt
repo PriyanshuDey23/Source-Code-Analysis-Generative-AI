@@ -1,8 +1,8 @@
 langchain
-langchain_community
+langchain-community
 langchain-google-genai
 python-dotenv
-langchain_experimental
+langchain-experimental
 langchainhub
 langchain_chroma
 chromadb==0.4.4
