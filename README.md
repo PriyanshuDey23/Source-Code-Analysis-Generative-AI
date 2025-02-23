@@ -3,7 +3,7 @@
 ![](output.png)
 
 ## 📌 Overview
-**Source Code Analysis** is a Streamlit-based application that allows users to **ingest a GitHub repository** and **chat with it** using AI. It utilizes **LangChain, ChromaDB, and Google Generative AI** to enable interactive analysis of source code.
+**Source Code Analysis** is a Streamlit-based application that allows users to **ingest a GitHub repository** and **chat with it** using AI. It utilizes **LangChain, ChromaDB, and Google Generative AI** to enable interactive source code analysis. It Uses the **Context-Aware Splitting** Technique which means it Tag to Python function
 
 ## 🛠 Features
 - 📂 **GitHub Repository Ingestion** – Clone and process a repository.
@@ -19,7 +19,7 @@
 📦 source-code-analysis
 ├── 📂 src
 │   ├── helper.py  # Repository ingestion, text processing, and embeddings
-├── store_index.py  # Loads repo, splits text, and stores in ChromaDB
+├── store_index.py  # Loads repo splits text, and stores in ChromaDB
 ├── app.py  # Streamlit UI for interacting with the repo
 ├── requirements.txt  # Dependencies
 └── README.md  # Project documentation
